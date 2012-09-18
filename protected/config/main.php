@@ -25,7 +25,7 @@ return array(
 
 	'modules'=>array(
     'rights'=>array(
-      'superuserName'=>'Admin', // Name of the role with super user privileges. 
+      'superuserName'=>'admin', // Name of the role with super user privileges. 
       'authenticatedName'=>'Authenticated', // Name of the authenticated user role. 
       'userIdColumn'=>'userId', // Name of the user id column in the database. 
       'userNameColumn'=>'userName', // Name of the user name column in the database. 
@@ -34,7 +34,7 @@ return array(
       'displayDescription'=>true, // Whether to use item description instead of name. 
       'flashSuccessKey'=>'RightsSuccess', // Key to use for setting success flash messages. 
       'flashErrorKey'=>'RightsError', // Key to use for setting error flash messages. 
-      'install'=>true, // Whether to install rights. 
+      //'install'=>true, // Whether to install rights. 
       'baseUrl'=>'/rights', // Base URL for Rights. Change if module is nested. 
       'layout'=>'rights.views.layouts.main', // Layout to use for displaying Rights. 
       'appLayout'=>'application.views.layouts.main', // Application layout. 
@@ -79,9 +79,9 @@ return array(
 			),
 		),
 		*/
-		'db'=>array(
+		/*'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/bottlemate.db',
-		),
+		),*/
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(

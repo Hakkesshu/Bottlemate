@@ -69,6 +69,16 @@ class UserController extends Controller
 
 		if(isset($_POST['User']))
 		{
+      if (CRYPT_BLOWFISH == 1) {
+        $base64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        $salt = '';
+        for($i=0; $i<20; $i++) {
+            $salt .= $base64[rand(0,61)];
+        }
+        $crypted = crypt($_POST['User']['password'], '$2a$07$' . $salt);
+        $_POST['User']['password'] = $crypted;
+      }
+
 			$model->attributes=$_POST['User'];
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->userId));
