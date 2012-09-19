@@ -69,21 +69,20 @@ return array(
       'class'=>'RDbAuthManager', // provides support authorization item sorting
     ),
 		// uncomment the following to enable URLs in path-format
-		/*
 		'urlManager'=>array(
+      'showScriptName'=>false,
 			'urlFormat'=>'path',
 			'rules'=>array(
-				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
-				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
-				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
+        // a standard rule to handle controller/action params
+        '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
 			),
 		),
-		*/
+    
 		/*'db'=>array(
 			'connectionString' => 'sqlite:'.dirname(__FILE__).'/../data/bottlemate.db',
 		),*/
+    
 		// uncomment the following to use a MySQL database
-		
 		'db'=>array(
 			'connectionString' => 'mysql:host=localhost;dbname=bottlemate',
 			'emulatePrepare' => true,
