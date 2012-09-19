@@ -21,6 +21,7 @@ return array(
 		'application.components.*',
     'application.modules.rights.*', // for rights
     'application.modules.rights.components.*',
+    'ext.CacheYii.*',
 	),
 
 	'modules'=>array(
