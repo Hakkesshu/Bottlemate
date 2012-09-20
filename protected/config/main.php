@@ -52,6 +52,20 @@ return array(
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
 		),
+    
+    'sitemap' => array(
+      //'class' => 'ext.sitemap.SitemapModule',     //or whatever the correct path is
+      /*'actions' => array(...),                    //optional
+      'absoluteUrls' => true|false,               //optional
+      'protectedControllers' => array('admin'),   //optional
+      'protectedActions' =>array('site/error'),   //optional
+      'priority' => '0.5',                        //optional
+      'changefreq' => 'daily',                    //optional
+      'lastmod' => '1985-11-05',                  //optional
+      'cacheId' => 'cache',                       //optional
+      'cachingDuration' => 3600,                  //optional
+      */          
+    ),
 		
 	),
 
@@ -76,6 +90,10 @@ return array(
 			'rules'=>array(
         // a standard rule to handle controller/action params
         '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+        
+        // sitemap
+        'sitemap.xml'   => 'sitemap/default/index',
+        'sitemap.html'  => 'sitemap/default/index/format/html',
 			),
 		),
     
